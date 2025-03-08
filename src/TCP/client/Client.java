@@ -1,4 +1,4 @@
-package client;
+package TCP.client;
 
 import java.io.IOException;
 import java.net.Socket;
@@ -8,11 +8,13 @@ public class Client {
             Socket clientSocket ;
 
             try{
+                // 클라이언트가 서버에 연결 시도
                 clientSocket = new Socket("172.30.1.16",80);
 
-                ReadThread readThread = new ReadThread(clientSocket);
-                WriteThread writeThread = new WriteThread(clientSocket);
+                ReadThread readThread = new ReadThread(clientSocket); // 서버에서 메시지를 읽음
+                WriteThread writeThread = new WriteThread(clientSocket); // 서버로 메시지 보냄
 
+                // 각각 실ㅂ
                 readThread.start();
                 writeThread.start();
 

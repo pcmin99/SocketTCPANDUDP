@@ -1,4 +1,4 @@
-package client;
+package TCP.client;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -28,7 +28,7 @@ public class ReadThread extends Thread {
             try {
                 result = br.readLine();
                 System.out.println();
-                System.out.println("받은 메세지" + result);
+                System.out.println("서버에게 받은 메세지: " + result);
             } catch (Exception e) {
                 e.printStackTrace();
             }
