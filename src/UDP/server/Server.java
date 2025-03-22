@@ -22,7 +22,7 @@ public class Server {
 
                 // 받은 데이터 출력
                 String message = new String(receivePacket.getData(), 0 , receivePacket.getLength());
-                System.out.println("클라 메세지" + message) ;
+                System.out.println("클라 메세지 :" + message) ;
 
                 // 응답 메세지 출력
                 String response = "서버 응답: " + message.toUpperCase();

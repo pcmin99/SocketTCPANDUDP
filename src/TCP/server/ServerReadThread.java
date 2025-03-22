@@ -19,7 +19,7 @@ public class ServerReadThread extends Thread {
         String message;
         try {
             while ((message = reader.readLine()) != null) {
-                System.out.println("클라이언트 메시지: " + message);
+                System.out.println("클라이언트 받은 메시지 ->" + message);
             }
         } catch (IOException e) {
             System.out.println("클라이언트 연결 종료");
