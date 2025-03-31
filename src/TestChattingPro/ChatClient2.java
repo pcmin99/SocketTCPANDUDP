@@ -7,7 +7,7 @@ import java.io.*;
 import java.net.*;
 
 public class ChatClient2 {
-    private static final String SERVER_IP = "172.30.1.64";
+    private static final String SERVER_IP = "172.30.1.98";
     private static final int PORT = 12345;
     private Socket socket;
     private PrintWriter out;
@@ -73,6 +73,7 @@ public class ChatClient2 {
         String message = inputField.getText();
         if (!message.isEmpty()) {
             out.println(message);
+            chatArea.append("[나] " + message + "\n"); // 내가 보낸 메시지를 채팅창에 추가
             inputField.setText("");
         }
     }
